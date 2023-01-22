@@ -16,7 +16,8 @@ export default function Login(props){
             <input type={username.type} value={username.value} onChange={username.onChange}/>
             <h2>Password</h2>
             <input type={password.type} value={password.value} onChange={password.onChange}/>
-            <button className="submit-btn" onClick={handleSubmit}>Submit</button>
+            <button className="submit-btn" onClick={handleSubmit}>Login</button>
+            <button className='submit-btn' onClick={()=>props.setPage("create profile")}>Create Account</button>
         </div>
     )
 }

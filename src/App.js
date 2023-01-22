@@ -1,13 +1,17 @@
 import Login from './components/Login';
 import Home from './components/Home';
+import CreateProfile from './components/CreateProfile';
 import './styles/app.css';
 import { useState } from 'react';
 function App() {
   const [user, setUser] = useState(null);
+  const [page, setPage] = useState("login");
   console.log(user)
   return (
 <div>
-  {user ? <Home user={user}/> : <Login setUser={setUser}/>}
+      {page === "login" && <Login setUser={setUser} setPage={setPage}/>}
+      {page === "home" && <Home user={user} setPage={setPage}/>}
+      {page === "create profile" && <CreateProfile setUser={setUser} setPage={setPage}/>}
 </div>
   );
 }

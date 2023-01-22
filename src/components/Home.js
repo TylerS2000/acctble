@@ -3,7 +3,7 @@ export default function Home(props) {
     return(
         <div>
             <h1  style={{color:"white"}}>Welcome {user.username}</h1>
-            <input type="text"></input>
+            
         </div>
     )
 }
