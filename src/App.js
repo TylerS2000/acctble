@@ -1,4 +1,5 @@
 import Login from './components/Login';
+import Home from './components/Home';
 import './styles/app.css';
 import { useState } from 'react';
 function App() {
@@ -6,7 +7,7 @@ function App() {
   console.log(user)
   return (
 <div>
-  {user ? <h1>Welcome {user.username}</h1> : <Login setUser={setUser}/>}
+  {user ? <Home user={user}/> : <Login setUser={setUser}/>}
 </div>
   );
 }

@@ -1,8 +1,9 @@
 import axios from 'axios';
-export default function login({username, password}){
+export default function login({username, password},setUser){
     axios.post('http://localhost:3001/api/login', {username, password})
     .then((response) => {
-        return response.data
+        console.log(response.data)
+        setUser(response.data)
     })
     .catch((error) => {
         console.log(error)
