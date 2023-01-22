@@ -9,7 +9,7 @@ function App() {
   console.log(user)
   return (
 <div>
-      {page === "login" && <Login setUser={setUser} setPage={setPage}/>}
+      {page === "login" && <Login setUser={setUser} setPage={setPage} user={user}/>}
       {page === "home" && <Home user={user} setPage={setPage}/>}
       {page === "create profile" && <CreateProfile setUser={setUser} setPage={setPage}/>}
 </div>

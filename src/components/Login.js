@@ -9,6 +9,9 @@ export default function Login(props){
         event.preventDefault()
         login({username: username.value, password: password.value}, props.setUser)
     }
+    if(props.user){
+        props.setPage('home')
+    }
     return (
         <div className='login-form'>
             <h1>Acctble</h1>
