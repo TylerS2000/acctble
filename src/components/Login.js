@@ -15,7 +15,7 @@ export default function Login(props){
     }
     return (
         <div className='login-form'>
-            <h1>Acctble</h1>
+            <h1>Acctble.</h1>
             <h2>Username</h2>
             <input type={username.type} value={username.value} onChange={username.onChange}/>
             <h2>Password</h2>

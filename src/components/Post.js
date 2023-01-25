@@ -10,9 +10,9 @@ function handleClick(){post({content: content.value}, props.token); getPosts(pro
     return(props.popUp) ? (
         <div className='popup'>
             <div className='popup-inner'>
-            <input type="text" value = {content.value} onChange = {content.onChange}/>
-            <button onClick={handleClick}>Post</button>
-            <button onClick={()=>props.setPopUp(false)}>Cancel</button>
+            <textarea className='content' value = {content.value} onChange = {content.onChange} />
+            <button onClick={handleClick} className='submit'>Post</button>
+            <button className='popup-close' onClick={()=>props.setPopUp(false)}>X</button>
         </div>
             </div>) : null}
         
