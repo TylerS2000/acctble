@@ -4,13 +4,13 @@ import useField from '../hooks/useField';
 import '../styles/Post.css';
 export default function Post(props) {
 let content = useField("text")
-
-function handleClick(){post({content: content.value}, props.token);}
+let goal = useField("text")
+function handleClick(){post({content: content.value, goal:goal.value}, props.token);}
     return(props.popUp) ? (
         <div className='popup'>
             <div className='popup-inner'>
             <h2>What is your current goal?</h2>
-            <input className='goal' type='text'/>
+            <input className='goal' type='text' value={goal.value} onChange={goal.onChange}/>
             <h2>What did you do today to be better?</h2>
             <textarea className='content' value = {content.value} onChange = {content.onChange} />
             <button onClick={handleClick} className='submit'>Post</button>

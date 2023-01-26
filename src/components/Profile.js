@@ -8,14 +8,24 @@ export default function Profile(props) {
     useEffect(()=>{
     getPostsSingleUser(props.user._id,setSingleUser)
     },[])
-    console.log(singleUser.posts);
     const posts = singleUser.posts
+    const numberOfPosts = posts ? posts.length : 0
     return (
         <div>
         <Navbar setPage={props.setPage}/>
         <div className="profile">
-            <h1>Profile</h1>
-            <h2>Username: {props.user.username}</h2>
+            <div className="profile-card">
+            <div className="username-pic">
+            <img src="https://www.computerhope.com/jargon/g/guest-user.png" alt="profile pic"/>
+            <h2 className="username">{props.user.username}</h2>
+            
+            </div>
+            <div className="bio">
+            <h5>Number of Posts:{numberOfPosts}</h5>
+            <p>Hi, I'm test</p>
+            </div>
+            </div>
+
             {posts && posts.map((post)=>(
                     <div className="post" key={post.id}>
                      <div className="user">
