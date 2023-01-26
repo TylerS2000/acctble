@@ -22,3 +22,11 @@
 .nav-clickables>h2{
 margin: 14px;
 }
+@media (max-width: 767px) {
+    .nav-clickables>h2{
+        margin: 10px;
+    }
+    .nav-clickables{
+        margin-right: 3vw;
+    }
+}

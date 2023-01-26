@@ -12,7 +12,7 @@
 
 .popup-inner{
     width:30%;
-    height: 20%;
+    height: 40%;
     background-color:#fff;
     border-radius:10px;
     padding:20px;
@@ -30,9 +30,28 @@
     bottom: 10px;
     right: 10px;
     cursor : pointer;
+    background-color: black;
+    color: white;
 }
 .content{
     width: 80%;
-    height: 80%;
+    height: 60%;
     resize: none;
+    word-wrap:break-word;
+    display:inline-block;
+    border: 2.5px black solid;
+}
+.popup-inner>h2{
+    color: #000;
+    margin-top: 0;
+}
+@media (max-width: 767px) {
+    .popup-inner{
+        width:80%;
+        height: 60%;
+    }
+    .content{
+        width: 80%;
+        height: 60%;
+    }
 }

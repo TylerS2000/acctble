@@ -1,6 +1,6 @@
 .home{
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: center;
     justify-content: center;
     margin-top: 7vh;
@@ -9,11 +9,8 @@
     position:fixed;
     bottom:20px;
     right:20px;
-    width:60px;
-    height:30px;
-    border-radius:10%;
-    background-color: white;
-    border: white;
+    width:70px;
+    cursor: pointer;
 }
 .post{
     width: 40vw;
@@ -23,10 +20,26 @@
     border: 2px solid #fff;
     display: flex;
     flex-direction: column;
+    word-wrap: break-word; 
 }
 img{
-    width: 20px;
+    width: 2.4vw;
+    height: 2.4vw;
 }
+
+@media (max-width: 767px) {
+    .post{
+        width: 80vw;
+    }
+    .home{
+        margin-top: 10vh;
+    }
+    img{
+        width: 11vw;
+        height: 11vw;
+    }
+}
+
 .user{
     display: flex;
     flex-direction: row;
