@@ -12,7 +12,7 @@ export default function CreateProfile(props) {
             password: password.value,
             name: name.value
         }
-        const response = await axios.post("http://localhost:3001/api/user", user)
+        const response = await axios.post("/api/user", user)
         console.log(response)
     }
     return(

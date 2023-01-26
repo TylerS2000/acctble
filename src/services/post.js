@@ -4,7 +4,7 @@ export default function post(content, token) {
         headers: { Authorization: "bearer " +token},
       }
     axios
-        .post("http://localhost:3001/api/posts", content, config)
+        .post("/api/posts", content, config)
         .then((response) => {
         console.log(response.data);
         })
