@@ -12,7 +12,7 @@ export default function Profile(props) {
     const numberOfPosts = posts ? posts.length : 0
     return (
         <div>
-        <Navbar setPage={props.setPage}/>
+        <Navbar setPage={props.setPage} setUser={props.setUser}/>
         <div className="profile">
             <div className="profile-card">
             <div className="username-pic">
