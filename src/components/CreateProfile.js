@@ -19,7 +19,7 @@ export default function CreateProfile(props) {
         }
         else{
         try{
-        const response = await axios.post("http://localhost:8080/api/user", user)
+        const response = await axios.post("/api/user", user)
         props.setPage("login")
         }
         catch(e){
