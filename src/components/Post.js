@@ -5,7 +5,7 @@ import '../styles/Post.css';
 export default function Post(props) {
 let content = useField("text")
 let goal = useField("text")
-function handleClick(){post({content: content.value, goal:goal.value}, props.token);}
+function handleClick(){post({content: content.value, goal:goal.value}, props.token); props.setPopUp(false);}
     return(props.popUp) ? (
         <div className='popup'>
             <div className='popup-inner'>
