@@ -16,7 +16,7 @@ function App() {
         setUser(JSON.parse(localStorage.getItem('user')))
       }}
     ,[page])
-  console.log(page);
+
   return (
 <div>
       {page === "login" && <Login setUser={setUser} setPage={setPage} user={user}/>}
