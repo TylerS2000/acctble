@@ -1,0 +1,16 @@
+.settings{
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.logout{
+    width: 100px;
+    height: 40px;
+    background-color: #333;
+    color: #fff;
+    border-radius: 3px;
+    font-size: 1.2em;
+    cursor: pointer;
+    margin-top: 20px;
+}

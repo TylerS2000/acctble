@@ -10,6 +10,9 @@ export default function Profile(props) {
     },[])
     const posts = singleUser.posts
     const numberOfPosts = posts ? posts.length : 0
+    console.log(
+        posts
+    );
     return (
         <div>
         <Navbar setPage={props.setPage} setUser={props.setUser}/>
@@ -21,7 +24,7 @@ export default function Profile(props) {
             
             </div>
             <div className="bio">
-            <h5>Number of Posts:{numberOfPosts}</h5>
+            <h3>Number of Posts: {numberOfPosts}</h3>
             <p>Hi, I'm test</p>
             </div>
             </div>
@@ -30,10 +33,10 @@ export default function Profile(props) {
                     <div className="post" key={post.id}>
                      <div className="user">
                          <img src="https://www.computerhope.com/jargon/g/guest-user.png" alt="profile pic"/>
-                         <h3>{props.user.username}</h3>
+                         <h2>{props.user.username}</h2>
                      </div>
                          <p className="date">{post.date}</p>
-                         <h4>Current Goal: Run a Marathon</h4>
+                         <h3>Current Goal: {post.goal||"None"}</h3>
                           <p>{post.content}</p>
                          
                      </div>))}

@@ -19,7 +19,7 @@ export default function CreateProfile(props) {
         }
         else{
         try{
-        const response = await axios.post("/api/user", user)
+        const response = await axios.post("http://localhost:8080/api/user", user)
         props.setPage("login")
         }
         catch(e){
@@ -31,7 +31,7 @@ export default function CreateProfile(props) {
     }
     return(
         <div className="profile-form">
-            <h1>Create Profile</h1>
+            <h1>Acctble.</h1>
             <h2>Username</h2>
             <input type={username.type} value={username.value} onChange={username.onChange}/>
             <h2>Password</h2>

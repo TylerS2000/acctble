@@ -7,7 +7,7 @@ export default function Home(props) {
     const [popUp, setPopUp] = useState(false)
     const user = props.user
     const posts = props.posts
-    useEffect(()=>getPosts(props.setPosts), [popUp, props.setPosts])
+    useEffect(()=>getPosts(props.setPosts), [popUp])
     function handleClick(){
         props.setPage("other user's profile")
     }
@@ -20,7 +20,7 @@ export default function Home(props) {
                <div className="post" key={post.id}>
                 <div className="user">
                     <img src="https://www.computerhope.com/jargon/g/guest-user.png" alt="profile pic"/>
-                    <h3 onClick={()=>{handleClick(); props.setViewingUser(post.user)}}>{post.user.username}</h3>
+                    <h2 onClick={()=>{handleClick(); props.setViewingUser(post.user)}}>{post.user.username}</h2>
                 </div>
                     <p className="date">{post.date}</p>
                     <h4>Current Goal: {post.goal||"None"}</h4>

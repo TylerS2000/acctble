@@ -6,7 +6,7 @@ export default function Navbar(props) {
             <div className="nav-clickables">
             <h2 onClick={()=>props.setPage("home")}>Home</h2>
             <h2 onClick={()=>props.setPage("profile")}>Profile</h2>
-            <h2 onClick={()=>{localStorage.clear();props.setUser(null); props.setPage("login")}}>Logout</h2>
+            <h2 onClick={()=>props.setPage("settings")}>Settings</h2>
             </div>
         </div>
     )

@@ -2,6 +2,7 @@ import Login from './components/Login';
 import Home from './components/Home';
 import Profile from './components/Profile';
 import CreateProfile from './components/CreateProfile';
+import Settings from './components/Settings';
 import './styles/app.css';
 import { useState, useEffect } from 'react';
 function App() {
@@ -23,6 +24,7 @@ function App() {
       {page === "create profile" && <CreateProfile setUser={setUser} setPage={setPage}/>}
       {page === "profile" && <Profile user={user} setUser={setUser} setPage={setPage}/>}
       {page === "other user's profile" && <Profile user={viewingUser}  setPage={setPage}/>}
+      {page === "settings" && <Settings user={user} setUser={setUser} setPage={setPage}/>}
 </div>
   );
 }

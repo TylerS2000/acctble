@@ -1,6 +1,6 @@
 import axios from 'axios';
 export default function login({username, password},setUser,setError){
-    axios.post('/api/login', {username, password})
+    axios.post('http://localhost:8080/api/login', {username, password})
     .then((response) => {
         console.log(response)
         localStorage.setItem('user', JSON.stringify(response.data))
