@@ -1,6 +1,11 @@
 import Navbar from "./Navbar"
 import "../styles/Settings.css"
+import updateProfile from "../services/updateProfile";
 export default function Settings(props){
+    const profile = {
+        "bio": "I am a bio",
+        "pic":"pic"}
+updateProfile(profile, props.user.token);
     return(
         <div className="settings">
             <Navbar setPage={props.setPage} setUser={props.setUser}/>
