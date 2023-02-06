@@ -8,6 +8,11 @@ export default function Navbar(props) {
             <h2 onClick={()=>props.setPage("profile")}>Profile</h2>
             <h2 onClick={()=>props.setPage("settings")}>Settings</h2>
             </div>
+            <div className="hamburger">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+            </div>
         </div>
     )
 }
