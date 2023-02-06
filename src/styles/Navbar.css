@@ -68,4 +68,16 @@ margin: 14px;
     justify-content:center;
     align-items:center;
 } 
+.nav-pop-inner{
+    width:80%;
+    height: 40%;
+    background-color:#fff;
+    border-radius:10px;
+    padding:20px;
+    position:relative;
+    bottom: 80px;
+}
+.nav-pop-inner h2{
+    font-size: 40px;
+}
 }

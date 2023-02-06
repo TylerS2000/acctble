@@ -19,7 +19,13 @@ export default function Navbar(props) {
             <h2 onClick={()=>props.setPage("profile")}>Profile</h2>
             <h2 onClick={()=>props.setPage("settings")}>Settings</h2>
             </div>
-            {change &&  <div className="nav-pop"></div>}
+            {change &&  <div className="nav-pop">
+                <div className="nav-pop-inner">
+                <h2 onClick={()=>props.setPage("home")}>Home</h2>
+            <h2 onClick={()=>props.setPage("profile")}>Profile</h2>
+            <h2 onClick={()=>props.setPage("settings")}>Settings</h2>
+                </div>
+                </div>}
             <div className={`hamburger ${change}`} onClick={handleClick}>
             <div className={`bar1`}></div>
             <div className={`bar2`}></div>

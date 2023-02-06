@@ -5,6 +5,7 @@ export default function Settings(props){
     const profile = {
         "bio": "I am a bio",
         "pic":"pic"}
+        console.log(props.user.token);
 updateProfile(profile, props.user.token);
     return(
         <div className="settings">
