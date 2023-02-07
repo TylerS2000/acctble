@@ -1,5 +1,5 @@
 import axios from "axios";
-export default function updateProfile(setProfile, profile,token) {
+export default function updateProfile(profile,token) {
     const config = {
         headers: { Authorization: "bearer " +token},
       }
@@ -7,7 +7,7 @@ export default function updateProfile(setProfile, profile,token) {
       let user=  JSON.parse(localStorage.getItem("user"))
       console.log(user);
     axios
-        .put(`http://localhost:8080/api/user/${user._id}`, profile,config)
+        .put(`http://localhost:8080/api/user/${user._id}`, profile, config)
         .then((response) => {
         console.log(response);
         })
