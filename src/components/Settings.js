@@ -4,7 +4,8 @@ import updateProfile from "../services/updateProfile";
 export default function Settings(props){
     const profile = {
         "bio": "I am a bio",
-        "pic":"pic"}
+        "pic":"https://allthatsinteresting.com/wordpress/wp-content/uploads/2018/09/pict-painting-of-warrior.jpg"
+    }
         console.log(props.user.token);
 updateProfile(profile, props.user.token);
     return(

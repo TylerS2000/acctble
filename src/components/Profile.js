@@ -25,14 +25,14 @@ export default function Profile(props) {
             </div>
             <div className="bio">
             <h3>Number of Posts: {numberOfPosts}</h3>
-            <p>Hi, I'm test</p>
+            <p>{props.user.bio}</p>
             </div>
             </div>
 
             {posts && posts.map((post)=>(
                     <div className="post" key={post.id}>
                      <div className="user">
-                         <img src="https://www.computerhope.com/jargon/g/guest-user.png" alt="profile pic"/>
+                         <img src={props.user.pic||"https://www.computerhope.com/jargon/g/guest-user.png"} alt="profile pic"/>
                          <h2>{props.user.username}</h2>
                      </div>
                          <p className="date">{post.date}</p>
