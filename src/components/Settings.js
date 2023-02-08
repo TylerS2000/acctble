@@ -17,6 +17,7 @@ updateProfile(profile, props.user.token);
             <input placeholder="URL"></input>
             <h2>Bio</h2>
             <textarea/>
+            <button className="logout" onClick={()=>updateProfile({})}>Submit</button>
             <button className="logout" onClick={()=>{localStorage.clear(); props.setUser(null); props.setPage("login")}}>Logout</button>
         </div>
     )

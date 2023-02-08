@@ -19,7 +19,7 @@ export default function Profile(props) {
         <div className="profile">
             <div className="profile-card">
             <div className="username-pic">
-            <img src="https://www.computerhope.com/jargon/g/guest-user.png" alt="profile pic"/>
+            <img src={props.user.pic||"https://www.computerhope.com/jargon/g/guest-user.png"} alt="profile pic" onerror="this.src='https://www.computerhope.com/jargon/g/guest-user.png';"/>
             <h2 className="username">{props.user.username}</h2>
             
             </div>
