@@ -19,7 +19,10 @@ export default function Profile(props) {
         <div className="profile">
             <div className="profile-card">
             <div className="username-pic">
-            <img src={props.user.pic||"https://www.computerhope.com/jargon/g/guest-user.png"} alt="profile pic" onerror="this.src='https://www.computerhope.com/jargon/g/guest-user.png';"/>
+            <img src={props.user.pic||"https://www.computerhope.com/jargon/g/guest-user.png"} alt="profile pic" onError={({ currentTarget }) => {
+    currentTarget.onerror = null
+    currentTarget.src="https://www.computerhope.com/jargon/g/guest-user.png";
+  }}/>
             <h2 className="username">{props.user.username}</h2>
             
             </div>
@@ -32,7 +35,10 @@ export default function Profile(props) {
             {posts && posts.map((post)=>(
                     <div className="post" key={post.id}>
                      <div className="user">
-                         <img src={props.user.pic||"https://www.computerhope.com/jargon/g/guest-user.png"} alt="profile pic"/>
+                         <img src={props.user.pic||"https://www.computerhope.com/jargon/g/guest-user.png"} alt="profile pic"  onError={({ currentTarget }) => {
+    currentTarget.onerror = null;
+    currentTarget.src="https://www.computerhope.com/jargon/g/guest-user.png";
+  }}/>
                          <h2>{props.user.username}</h2>
                      </div>
                          <p className="date">{post.date}</p>

@@ -1,8 +1,51 @@
 .settings{
-    margin-top: 60px;
+    margin: auto;
+    margin-top: 90px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 400px;
+    height: 70vh;
+    text-align: left;
+
+}
+.settings>input{
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 2px solid #ccc;
+    font-size: 1.2em;
+    transition: border 0.2s ease-in-out;
+    background-color: #222222;
+    color: #fff;
+}
+.settings>textarea{
+    width: 80%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 2px solid #ccc;
+    font-size: 1.2em;
+    transition: border 0.2s ease-in-out;
+    background-color: #222222;
+    color: #fff;
+    resize: none;
+}
+.settings>button{
+    
+    color: #fff;
+    width: 80%;
+    background-color: #222222;
+    margin-top: 20px;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border: 1px #fff solid;
+    transition: background-color 0.2s ease-in-out;
+}
+.settings>button:hover {
+    background-color: #373737;
 }
 .logout{
     width: 100px;
@@ -13,4 +56,20 @@
     font-size: 1.2em;
     cursor: pointer;
     margin-top: 20px;
+}
+@media(max-width:787px){
+    .settings{
+        width: 80vw;
+        height: 60%;
+        margin-top: 8vh;
+    }
+    .settings>input{
+        width: 80%;
+    }
+    .settings>textarea{
+        width: 80%;
+    }
+    .settings>button{
+        width: 80%;
+    }
 }

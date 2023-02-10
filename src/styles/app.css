@@ -5,9 +5,9 @@
     scrollbar-width: none; 
   }
 body{
-    background-color: #212529;
+    background-color: #1d1d1d;
     font-family: 'Titillium Web', regular;
-    color: #fff;
+    color: #ffffff;
 }
 ::-webkit-scrollbar {
     display: none;

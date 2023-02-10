@@ -1,9 +1,11 @@
 .login-form {
     width: 300px;
-    margin: 17vh auto;
+    margin: 13vh auto;
     padding: 20px;
     text-decoration: #fff;
-    color: #fff;
+    color: #dddddd;
+    
+    border-radius: 20px;
 }
 
 .login-form h1 {
@@ -27,6 +29,8 @@
     border: 1px solid #ccc;
     font-size: 1.2em;
     transition: border 0.2s ease-in-out;
+    background-color: #222222;
+    color: #fff;
 }
 
 .login-form input:focus {
@@ -36,16 +40,17 @@
 
 .login-form .submit-btn {
     width: 100%;
-    background-color: #333;
+    background-color: #222222;
     color: #fff;
     padding: 12px;
     margin-top: 20px;
     border-radius: 5px;
     font-size: 1.2em;
     cursor: pointer;
+    border: 1px #fff solid;
     transition: background-color 0.2s ease-in-out;
 }
 
 .login-form .submit-btn:hover {
-    background-color: #555;
+    background-color: #373737;
 }

@@ -23,7 +23,6 @@ export default function CreateProfile(props) {
         props.setPage("login")
         }
         catch(e){
-            console.log(e)
             setError("Username already exists")
             setTimeout(()=>setError(null), 2000)
         }

@@ -19,7 +19,10 @@ export default function Home(props) {
            {posts.map((post)=>(
                <div className="post" key={post.id}>
                 <div className="user">
-                    <img src={post.user.pic||"https://www.computerhope.com/jargon/g/guest-user.png"} alt="profile pic"/>
+                    <img src={post.user.pic||"https://www.computerhope.com/jargon/g/guest-user.png"} alt="profile pic" onError={({ currentTarget }) => {
+    currentTarget.onerror = null; // prevents looping
+    currentTarget.src="https://www.computerhope.com/jargon/g/guest-user.png";
+  }}/>
                     <h2 onClick={()=>{handleClick(); props.setViewingUser(post.user)}}>{post.user.username}</h2>
                 </div>
                     <p className="date">{post.date}</p>
