@@ -5,7 +5,7 @@ export default function getPosts(setPosts) {
         .get("http://localhost:8080/api/posts")
         .then((response) => {
         console.log(response);
-        setPosts(response.data);
+        setPosts(response.data,()=>{console.log("posts set")});
         })
         .catch((error) => {
         console.log(error);
