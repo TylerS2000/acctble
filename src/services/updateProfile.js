@@ -7,7 +7,7 @@ export default function updateProfile(profile,token,setUser) {
       let user=  JSON.parse(localStorage.getItem("user"))
       console.log(user);
     axios
-        .put(`http://localhost:8080/api/user/${user._id}`, profile, config)
+        .put(`/api/user/${user._id}`, profile, config)
         .then((response) => {
         localStorage.setItem("user", JSON.stringify(response.data));
         })
