@@ -6,6 +6,6 @@ You can check in each day to get motivated!
 
 This is a work in progress and features are still being added. 
 
-[Live Site](acctbles.fly.dev)
+[Live Site](https://acctbles.fly.dev)
 
 
