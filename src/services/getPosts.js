@@ -4,10 +4,10 @@ export default function getPosts(setPosts) {
     axios
         .get("/api/posts")
         .then((response) => {
-        console.log(response);
-        setPosts(response.data,()=>{console.log("posts set")});
+            console.log(response);
+            setPosts(response.data, () => { console.log("posts set") });
         })
         .catch((error) => {
-        console.log(error);
+            console.log(error);
         });
-    }
+}

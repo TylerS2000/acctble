@@ -9,7 +9,7 @@ export default function login({username, password},setUser,setError){
     .catch((error) => {
         console.log(error)
         setError("Invalid Username or Password")
-        setTimeout(()=>setError(null), 1000)
+        setTimeout(()=>setErrorf(null), 1000)
     })
    
 }
