@@ -3,7 +3,7 @@
     margin: 17vh auto;
     padding: 20px;
     text-decoration: #fff;
-    color: #fff;
+    color: #dddddd;
 }
 .profile-form h1{
     text-align: center;
@@ -19,6 +19,8 @@
     border: 1px solid #ccc;
     font-size: 1.2em;
     transition: border 0.2s ease-in-out;
+    background-color: #222222;
+    color: #fff;
 }
 .profile-form input:focus{
     border: 1px solid #555;
@@ -26,13 +28,14 @@
 }
 .profile-form button{
     width: 100%;
-    background-color: #333;
+    background-color: #222222;
     color: #fff;
     padding: 12px;
     margin-top: 20px;
     border-radius: 5px;
     font-size: 1.2em;
     cursor: pointer;
+    border: 1px #fff solid;
     transition: background-color 0.2s ease-in-out;
 }
 .profile-form>button:hover{
